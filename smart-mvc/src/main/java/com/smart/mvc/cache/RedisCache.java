@@ -97,7 +97,7 @@ public class RedisCache<T> {
 	@SuppressWarnings("unchecked")
 	public void setSet(String k, Set<T> v, long time) {
 		String key = KEY_SET_PREFIX + k;
-		LOGGER.debug("setSet key [{}]", key);
+		LOGGER.debug("setSet key [{}]", key+1);
 		try {
 			SetOperations<String, T> setOps = redisTemplate.opsForSet();
 			setOps.add(key, (T[]) v.toArray());
