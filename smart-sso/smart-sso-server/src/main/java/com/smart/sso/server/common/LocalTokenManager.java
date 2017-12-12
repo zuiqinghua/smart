@@ -30,7 +30,7 @@ public class LocalTokenManager extends TokenManager {
 				// 已过期，清除对应token
 				if (now.compareTo(dummyUser.expired) > 0) {
 					tokenMap.remove(token);
-					LOGGER.debug("token : + 1 + 1 + 1" + token + "已失效");
+					LOGGER.debug("token : + 1 + 1 " + token + "已失效");
 				}
 			}
 		}
